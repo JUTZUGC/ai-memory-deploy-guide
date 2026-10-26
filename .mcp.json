@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "aimemory-guide": {
+      "command": "node",
+      "args": [
+        "mcp-server.mjs"
+      ]
+    }
+  }
+}

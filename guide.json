@@ -1,0 +1,104 @@
+{
+  "owner": "JUTZUGC",
+  "code": "JUTZUGC",
+  "project": {
+    "key": "aimemory",
+    "nameCn": "ai-memory",
+    "repoName": "ai-memory-deploy-guide",
+    "oneLiner": "给编码 Agent 用的跨工具长期记忆",
+    "officialRepo": "https://github.com/akitaonrails/ai-memory",
+    "officialDocs": "https://github.com/akitaonrails/ai-memory#quick-start",
+    "stars": "13.6k",
+    "license": "MIT",
+    "highlights": [
+      "跨 20+ Agent：Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Grok 等共用一份记忆",
+      "交接有协议：每条 handoff 有归属、只能被认领一次",
+      "可带上下文：`ai-memory run <agent>` 把当前会话交给另一个 Agent",
+      "本地优先：数据目录在本机，用 bearer token 保护"
+    ],
+    "mcpSupport": "ai-memory 会注册 MCP、hooks 与 Agent Skills，让各客户端读写共享记忆；它不是通用 MCP 工具集。本仓库的 MCP 只提供安装步骤与常见坑。",
+    "webuiUrl": "",
+    "adapterPorts": "",
+    "collectedAt": "2026-10-26",
+    "verification": [
+      [
+        "Windows 下 install.ps1 安装成功（v3.2.5，隔离用户目录）",
+        "已验证 2026-10-26"
+      ],
+      [
+        "ai-memory --version 返回 3.2.5",
+        "已验证 2026-10-26"
+      ],
+      [
+        "setup 未执行（会改客户端配置并起后台服务）",
+        "已核对 2026-10-26"
+      ],
+      [
+        "MCP 服务握手与工具列表（initialize / tools/list）",
+        "已验证 2026-10-26"
+      ],
+      [
+        "非目标宿主调用被拦截（HOST_NOT_ALLOWED）",
+        "已验证 2026-10-26"
+      ]
+    ],
+    "deploy": {
+      "type": "script",
+      "steps": [
+        "curl -fsSL https://github.com/akitaonrails/ai-memory/releases/latest/download/install.sh | sh",
+        "export PATH=\"$HOME/.local/bin:$PATH\"",
+        "ai-memory setup --yes"
+      ],
+      "stepsPs": [
+        "irm https://github.com/akitaonrails/ai-memory/releases/latest/download/install.ps1 | iex",
+        "$exe = \"$env:LOCALAPPDATA\\Programs\\ai-memory\\ai-memory.exe\" ; if (-not (Test-Path $exe)) { throw '安装失败：未找到 ai-memory.exe' }",
+        "& $exe setup --yes"
+      ],
+      "source": "https://github.com/akitaonrails/ai-memory#quick-start"
+    },
+    "pitfalls": [
+      "命令找不到：装完在 `~/.local/bin`，新开终端或手动加 PATH",
+      "Windows 原生可能不稳：官方标注实验性，遇到问题改用 WSL2",
+      "setup 改了配置：先看清它列出的客户端再确认，不想接的用 `--agent` 限定",
+      "客户端看不到记忆：确认后台服务在跑，并重启客户端",
+      "多台机器要同步：按官方文档配远程服务，默认只在本机",
+      "卸载前先停服务，否则会留下后台进程"
+    ]
+  },
+  "gate": {
+    "allow": [
+      "dumate"
+    ],
+    "label": "百度搭子",
+    "url": "https://www.dumate.cn/",
+    "guideUrl": "https://github.com/JUTZUGC/ai-memory-deploy-guide",
+    "howToFix": [
+      "1. 打开 https://www.dumate.cn/ ，下载并安装「百度搭子」电脑端（Windows / macOS）",
+      "2. 用账号登录",
+      "3. 在对话窗口发送：你好，帮我从 github 部署 JUTZUGC/ai-memory-deploy-guide 到我的电脑上",
+      "4. 部署完成后，在同一对话窗口里继续使用"
+    ],
+    "hint": "请改用「百度搭子」部署后再使用；本工具没有网页版入口。",
+    "onError": "allow"
+  },
+  "keywords": [
+    "ai-memory 安装",
+    "Agent 长期记忆",
+    "Claude Code 记忆",
+    "Codex 记忆",
+    "MCP 记忆",
+    "跨 Agent 上下文",
+    "AI 编码 记忆",
+    "ai-memory 教程",
+    "ai-memory 中文",
+    "ai-memory deploy guide"
+  ],
+  "topics": [
+    "ai-agents",
+    "memory",
+    "mcp",
+    "claude-code",
+    "codex",
+    "rust"
+  ]
+}
