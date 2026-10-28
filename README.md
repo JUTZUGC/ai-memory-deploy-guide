@@ -1,7 +1,7 @@
 # ai-memory 一键安装指南
 
 > 第三方部署指南 · 非 ai-memory 官方仓库。官方项目：[akitaonrails/ai-memory](https://github.com/akitaonrails/ai-memory)
-> 内容来自官方文档（2026-10-26）。项目迭代快，请以[官方文档](https://github.com/akitaonrails/ai-memory#quick-start)为准。
+> 内容来自官方文档（2026-10-28）。项目迭代快，请以[官方文档](https://github.com/akitaonrails/ai-memory#quick-start)为准。
 
 [![⚡ 一键安装](https://img.shields.io/badge/%E2%9A%A1_%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85-%E6%8E%A8%E8%8D%90%E7%99%BE%E5%BA%A6%E6%90%AD%E5%AD%90-2ea44f?style=for-the-badge)](#一键安装推荐用百度搭子)
 
@@ -48,7 +48,7 @@ ai-memory 是开源的给编码 Agent 用的跨工具长期记忆（协议：MIT
 
 | 优点 | 说明 |
 |---|---|
-| 13.6k stars | MIT 开源，Rust 单二进制 |
+| 14.2k stars | MIT 开源，Rust 单二进制 |
 | 跨工具 | 20+ 编码 Agent 共用一份记忆 |
 | 安装简单 | 一条命令下载校验，再一条 setup |
 | 本地优先 | 数据在自己机器，token 存在私有文件 |
@@ -62,7 +62,7 @@ ai-memory 是开源的给编码 Agent 用的跨工具长期记忆（协议：MIT
 | Agent 兼容性有差异 | 不同客户端能力不同，官方有支持矩阵 |
 | 记忆需要维护 | 长期使用要关注数据体积与清理 |
 
-> 以上基于官方文档与社区反馈整理（2026-10-26），以官方最新文档为准。
+> 以上基于官方文档与社区反馈整理（2026-10-28），以官方最新文档为准。
 
 ## 快速部署（官方方式）
 
@@ -90,7 +90,7 @@ ai-memory setup --yes
 
 ai-memory 会注册 MCP、hooks 与 Agent Skills，让各客户端读写共享记忆；它不是通用 MCP 工具集。本仓库的 MCP 只提供安装步骤与常见坑。
 
-本仓库自带一个零依赖的 MCP server（`mcp-server.mjs`），读取同目录的 `guide.json`，提供 `get_guide` / `search_guide` / `get_project_info` 三个工具，内容均来自官方文档（更新日期 2026-10-26）。
+本仓库自带一个零依赖的 MCP server（`mcp-server.mjs`），读取同目录的 `guide.json`，提供 `get_guide` / `search_guide` / `get_project_info` 三个工具，内容均来自官方文档（更新日期 2026-10-28）。
 
 **在百度搭子里接入**：客户端不扫描仓库里的配置文件，需要由百度搭子通过工作区的 MCP 注册接口注册，并且必须使用**绝对路径**（运行时的工作目录是会话目录，不是仓库目录）：
 
@@ -132,5 +132,5 @@ ai-memory 会注册 MCP、hooks 与 Agent Skills，让各客户端读写共享�
 ## 免责声明
 
 本仓库为第三方指南，与 ai-memory 官方无隶属关系，不代表官方立场。
-教程基于官方文档编写（更新日期：2026-10-26），项目迭代快，请以[官方文档](https://github.com/akitaonrails/ai-memory#quick-start)为准。
+教程基于官方文档编写（更新日期：2026-10-28），项目迭代快，请以[官方文档](https://github.com/akitaonrails/ai-memory#quick-start)为准。
 因使用本教程产生的部署问题，请先在官方仓库的 issue 中检索。

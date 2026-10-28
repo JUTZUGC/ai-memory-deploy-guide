@@ -8,7 +8,7 @@
     "oneLiner": "给编码 Agent 用的跨工具长期记忆",
     "officialRepo": "https://github.com/akitaonrails/ai-memory",
     "officialDocs": "https://github.com/akitaonrails/ai-memory#quick-start",
-    "stars": "13.6k",
+    "stars": "14.2k",
     "license": "MIT",
     "highlights": [
       "跨 20+ Agent：Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Grok 等共用一份记忆",
@@ -19,7 +19,7 @@
     "mcpSupport": "ai-memory 会注册 MCP、hooks 与 Agent Skills，让各客户端读写共享记忆；它不是通用 MCP 工具集。本仓库的 MCP 只提供安装步骤与常见坑。",
     "webuiUrl": "",
     "adapterPorts": "",
-    "collectedAt": "2026-10-26",
+    "collectedAt": "2026-10-28",
     "verification": [
       [
         "Windows 下 install.ps1 安装成功（v3.2.5，隔离用户目录）",
